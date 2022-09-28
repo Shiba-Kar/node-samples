@@ -6,23 +6,26 @@
   "main": "index.js",
   "scripts": {
     "test": "./test.sh",
-    "lint": "jshint lib test"
+    "lint": "jshint lib test",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "license": "Apache-2.0",
   "dependencies": {
     "async": "^2.5.0",
     "expect": "^1.12.2",
-    "google-auth-library": "^0.9.6",
-    "googleapis": "^24.0.0",
+    "google-auth-library": "^6.0.0",
+    "googleapis": "^49.0.0",
     "js-beautify": "^1.5.10",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "mocha": "^2.3.3",
+    "mocha": "^6.2.3",
     "promise": "^7.0.4",
     "rimraf": "^2.4.3",
     "swig": "^1.4.2",
     "text-encoding": "^0.5.2",
-    "uuid": "^3.2.1"
+    "uuid": "^3.2.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "jshint": "^2.9.3"
@@ -31,5 +34,6 @@
     "esversion": 6,
     "mocha": true,
     "node": true
-  }
+  },
+  "snyk": true
 }
